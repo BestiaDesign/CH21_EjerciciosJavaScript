@@ -34,7 +34,7 @@ document.write(numMayor); */
         // Solución
 let arrayMenores = [-1, 3, 4, 2, 7, 25];
 let menores = document.getElementById("menores");
-let numeroMenor = 0;
+let numeroMenor = arrayMenores[0];
 let i = 0;
 
 while (i<arrayNumeros.length) {
