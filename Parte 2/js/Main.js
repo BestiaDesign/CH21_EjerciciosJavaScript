@@ -40,7 +40,23 @@ alertResultado1.innerHTML = 'El número menor de: ' + array + ' es: ' + numMenor
 }); 
 
 // Ejercicio 3
+let numeroAdivinado = document.getElementById("numeroAdivinado");
+let alertResultado5 = document.getElementById("alertResultado5");
+let numeroPensado = Math.floor(Math.random() * 101);
+console.log ("Número pensado " + numeroPensado);
 
+numeroAdivinado.addEventListener("click", function (event){
+    event.preventDefault();
+       
+    let inputAdivinar = parseInt(document.getElementById("inputAdivinar").value);
+
+    if (numeroPensado != inputAdivinar){
+        alertResultado5.innerHTML = 'El número : ' + inputAdivinar + ' no fue el pensado :c , ingresa otro número'; 
+	}
+    else {
+        alertResultado5.innerHTML = 'El número : ' + inputAdivinar + ' sí fue el pensado, yaay c: ';  
+	}
+});
 
 // Ejercicio 4
 let multiplo = document.getElementById("multiplo");
@@ -89,4 +105,18 @@ resSuma.addEventListener("click", function (event){
 }); 
 
 // Ejercicio 6
+let parImpar = document.getElementById("parImpar");
+let alertResultado4 = document.getElementById("alertResultado4");
 
+parImpar.addEventListener("click", function (event){
+    event.preventDefault();
+    let inputPar = parseInt(document.getElementById("inputPar").value);
+    let multiplo1 = inputPar % 2;
+
+    if (multiplo1 != 0) {
+        alertResultado4.innerHTML = 'El número : ' + inputPar + ' es número impar '; 
+    }
+    else {
+        alertResultado4.innerHTML = 'El número : ' + inputPar + ' es número par ';  
+    }
+});
