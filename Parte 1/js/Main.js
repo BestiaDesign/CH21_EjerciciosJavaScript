@@ -88,3 +88,9 @@ menores.innerHTML += 'El número menor de -1, 3, 4, 2, 7, 25 es: ' + numeroMenor
      
     // EJERCICIO 4:
         // Solución 1
+
+    let desorden = document.getElementById("desorden");
+    let lista =  [1, 2, 5, 14, 24, 31, 50, 105];
+
+    lista.sort(function() { return Math.random() - 0.5 });
+    desorden.innerHTML += 'Los números aleatorios del array [1, 2, 5, 14, 24, 31, 50, 105] son: ' + lista + '<br>' ;    
