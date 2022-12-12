@@ -60,8 +60,33 @@ multiplo.addEventListener("click", function (event){
 });
 
 // Ejercicio 5
+let resSuma = document.getElementById("resSuma");
+let alertResultado3 = document.getElementById("alertResultado3");
 
+resSuma.addEventListener("click", function (event){
+    event.preventDefault();
+    let primerInput = parseInt(document.getElementById("primerInput").value);
+    let segundoInput = parseInt(document.getElementById("segundoInput").value);
+    let tercerInput = parseInt(document.getElementById("tercerInput").value);
+    let array = [primerInput, segundoInput, tercerInput];
 
+    // let numMenor = array[0];
 
-// Ejerciciio 6
+    if (primerInput == segundoInput + tercerInput) {
+    alertResultado3.innerHTML = primerInput + ' es la suma de: ' + segundoInput + ' y ' + tercerInput ;   
+    }
+
+    else if (segundoInput == primerInput + tercerInput) {
+    alertResultado3.innerHTML = segundoInput + ' es la suma de: ' + primerInput + ' y ' + tercerInput ;   
+    }
+
+    else if (tercerInput == primerInput + segundoInput) {
+    alertResultado3.innerHTML = tercerInput + ' es la suma de: ' + primerInput + ' y ' + segundoInput ;   
+    }
+    else{
+        alertResultado3.innerHTML = 'En ' + array + ' ningun número es la suma de los otros dos ';
+    }
+}); 
+
+// Ejercicio 6
 
